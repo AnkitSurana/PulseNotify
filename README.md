@@ -101,28 +101,10 @@ PUT /api/notifications/{id}/mark-read
   → Mark notification as read
 ```
 
-### Notification Templates
-
-```bash
-GET /api/templates/
-  → List all notification templates
-
-POST /api/templates/
-  body: {
-    "name": "welcome_email",
-    "subject": "Welcome to PulseNotify",
-    "body": "Hello {name}, welcome!",
-    "type": "email"
-  }
-
-GET /api/templates/{id}/
-  → Get template details
-```
-
 ## Tech Stack
 
 | Component | Technology | Purpose |
-|-----------|-----------|---------|
+|-----------|-----------|----------|
 | Framework | Django 4.2 | Web framework |
 | API | Django REST Framework 3.15 | REST API |
 | Auth | djangorestframework-simplejwt | JWT authentication |
@@ -237,10 +219,6 @@ heroku addons:create heroku-postgresql:hobby-dev
 heroku addons:create heroku-redis:premium-0
 git push heroku main
 ```
-
-### AWS/DigitalOcean
-
-See [Django Deployment Guide](https://docs.djangoproject.com/en/4.2/howto/deployment/) for best practices.
 
 ## Testing
 
